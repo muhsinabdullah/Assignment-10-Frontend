@@ -9,7 +9,7 @@ const MyServices = () => {
     const { user } = useContext(AuthContext)
 
     useEffect(() => {
-        fetch(`http://localhost:3000/my-services?email=${user?.email}`)
+        fetch(`https://backend-10-alpha.vercel.app/my-services?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setMyServices(data))
             .catch(err => alert(err))

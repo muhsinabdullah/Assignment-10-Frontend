@@ -29,7 +29,7 @@ const AddService = () => {
             date,
             email,
         }
-        axios.post('http://localhost:3000/services', formData)
+        axios.post('https://backend-10-alpha.vercel.app/services', formData)
         .then(res =>{
             console.log(res)
         })

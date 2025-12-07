@@ -9,7 +9,7 @@ const UpdateService = () => {
     const [service, setServices] = useState()
     const [category, setCategory] = useState(service?.category)
     useEffect(() => {
-        axios.get(`http://localhost:3000/services/${id}`)
+        axios.get(`https://backend-10-alpha.vercel.app/services/${id}`)
             .then(res => {
                 setServices(res.data)
                 setCategory(res.data.category)
