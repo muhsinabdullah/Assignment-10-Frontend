@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
 import Services from './Services';
+import { Link } from 'react-router';
 
 const MyServices = () => {
     const [myServices, setMyServices] = useState([]);
@@ -15,7 +16,6 @@ const MyServices = () => {
     }, [user?.email])
     return (
         <div>
-            my services
             <div className="overflow-x-auto">
                 <table className="table">
                     {/* head */}
@@ -50,7 +50,7 @@ const MyServices = () => {
                                     </td>
                                     <th className=' flex gap-3'>
                                         <button className="btn btn-error btn-xs">Delete</button>
-                                        <button className="btn btn-info btn-xs">Edit</button>
+                                        <Link to={`/update-services/${service?._id}`}> <button className="btn btn-info btn-xs">Edit</button></Link>
                                     </th>
                                 </tr>)
                         }
