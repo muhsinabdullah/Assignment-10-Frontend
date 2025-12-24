@@ -40,7 +40,7 @@ const UpdateService = () => {
             email,
             createdAt:service?.createdAt
         }
-        axios.put('http:localhost:3000/update', formData)
+        axios.put('https://backend-10-alpha.vercel.app/update', formData)
         .then(res =>{
             console.log(res.data)
         })
